@@ -78,40 +78,81 @@
 
         <!-- Module Cards -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <button onclick="startQuiz('unidad1')" class="text-left group bg-slate-950/80 hover:bg-slate-800/80 border border-slate-800 hover:border-indigo-500/60 rounded-xl p-5 transition shadow-sm">
+          <button onclick="selectModule('unidad1')" class="text-left group bg-slate-950/80 hover:bg-slate-800/80 border border-slate-800 hover:border-indigo-500/60 rounded-xl p-5 transition shadow-sm">
             <div class="flex items-center justify-between mb-2">
               <span class="text-xs font-bold uppercase tracking-wider text-indigo-400">Unidad 1</span>
-              <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-0.5 rounded-full">30 preguntas</span>
+              <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-0.5 rounded-full">21 de 30 · 25 min</span>
             </div>
             <h3 class="text-base font-bold text-white group-hover:text-indigo-300 transition mb-1">Fundamentos y Política Criminal</h3>
             <p class="text-xs text-slate-400">Binder, Pezzuchi, ciclo del análisis delictual, dato crítico y cifra negra.</p>
           </button>
 
-          <button onclick="startQuiz('unidad2')" class="text-left group bg-slate-950/80 hover:bg-slate-800/80 border border-slate-800 hover:border-indigo-500/60 rounded-xl p-5 transition shadow-sm">
+          <button onclick="selectModule('unidad2')" class="text-left group bg-slate-950/80 hover:bg-slate-800/80 border border-slate-800 hover:border-indigo-500/60 rounded-xl p-5 transition shadow-sm">
             <div class="flex items-center justify-between mb-2">
               <span class="text-xs font-bold uppercase tracking-wider text-emerald-400">Unidad 2</span>
-              <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-0.5 rounded-full">30 preguntas</span>
+              <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-0.5 rounded-full">21 de 30 · 25 min</span>
             </div>
             <h3 class="text-base font-bold text-white group-hover:text-emerald-300 transition mb-1">Metodología y Objeto Criminológico</h3>
             <p class="text-xs text-slate-400">Hernández Sampieri (cuanti/cuali), Cid Moliné & Larrauri, víctima y delito como evento.</p>
           </button>
 
-          <button onclick="startQuiz('unidad3')" class="text-left group bg-slate-950/80 hover:bg-slate-800/80 border border-slate-800 hover:border-indigo-500/60 rounded-xl p-5 transition shadow-sm">
+          <button onclick="selectModule('unidad3')" class="text-left group bg-slate-950/80 hover:bg-slate-800/80 border border-slate-800 hover:border-indigo-500/60 rounded-xl p-5 transition shadow-sm">
             <div class="flex items-center justify-between mb-2">
               <span class="text-xs font-bold uppercase tracking-wider text-sky-400">Unidad 3</span>
-              <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-0.5 rounded-full">30 preguntas</span>
+              <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-0.5 rounded-full">21 de 30 · 25 min</span>
             </div>
             <h3 class="text-base font-bold text-white group-hover:text-sky-300 transition mb-1">Estadística Moral y Positivismo</h3>
             <p class="text-xs text-slate-400">Quetelet, Guerry, Escuela Positiva, Ferri, Anitua y control médico-higienista.</p>
           </button>
 
-          <button onclick="startQuiz('integrador')" class="text-left group bg-gradient-to-br from-indigo-950/70 to-slate-950 hover:from-indigo-900/60 hover:to-slate-900 border border-indigo-500/40 hover:border-indigo-400 rounded-xl p-5 transition shadow-md">
+          <button onclick="selectModule('integrador')" class="text-left group bg-gradient-to-br from-indigo-950/70 to-slate-950 hover:from-indigo-900/60 hover:to-slate-900 border border-indigo-500/40 hover:border-indigo-400 rounded-xl p-5 transition shadow-md">
             <div class="flex items-center justify-between mb-2">
               <span class="text-xs font-bold uppercase tracking-wider text-amber-300">Simulacro General</span>
-              <span class="text-xs bg-indigo-500/20 text-indigo-200 border border-indigo-500/30 px-2.5 py-0.5 rounded-full">90 preguntas</span>
+              <span class="text-xs bg-indigo-500/20 text-indigo-200 border border-indigo-500/30 px-2.5 py-0.5 rounded-full">21 de 90 · 25 min</span>
             </div>
             <h3 class="text-base font-bold text-white group-hover:text-amber-200 transition mb-1">Examen Integrador Completo</h3>
             <p class="text-xs text-slate-300">Banco completo mezclado de las Unidades 1, 2 y 3 en orden aleatorio.</p>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCREEN 1B: PRE-EXAM / START -->
+    <section id="screen-start" class="hidden fade-in space-y-6">
+      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-semibold mb-4">
+          ANTES DE COMENZAR
+        </div>
+        <h2 id="start-title" class="text-2xl sm:text-3xl font-extrabold text-white mb-2">Módulo</h2>
+        <p id="start-student" class="text-sm text-slate-400 mb-6"></p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
+          <div class="bg-slate-950 border border-slate-800 rounded-xl p-4">
+            <div class="text-2xl font-extrabold text-indigo-400">21</div>
+            <div class="text-xs text-slate-400 mt-1">Preguntas al azar<br><span id="start-pool"></span></div>
+          </div>
+          <div class="bg-slate-950 border border-slate-800 rounded-xl p-4">
+            <div class="text-2xl font-extrabold text-amber-300">25:00</div>
+            <div class="text-xs text-slate-400 mt-1">Minutos de tiempo total<br>el reloj arranca al comenzar</div>
+          </div>
+          <div class="bg-slate-950 border border-slate-800 rounded-xl p-4">
+            <div class="text-2xl font-extrabold text-emerald-400">60%</div>
+            <div class="text-xs text-slate-400 mt-1">Para aprobar<br>(13 correctas de 21)</div>
+          </div>
+        </div>
+
+        <ul class="text-sm text-slate-300 space-y-2 mb-8 list-disc pl-5">
+          <li>Cada respuesta queda <strong class="text-amber-300">bloqueada</strong> y no se puede volver atrás.</li>
+          <li>Si se agota el tiempo, el examen <strong class="text-rose-300">se cierra solo</strong> y las preguntas sin contestar cuentan como incorrectas.</li>
+          <li>Cada intento sortea preguntas distintas y mezcla el orden de las opciones.</li>
+        </ul>
+
+        <div class="flex flex-wrap items-center gap-3">
+          <button onclick="startQuiz()" class="px-7 py-3.5 rounded-xl font-bold text-base bg-indigo-600 hover:bg-indigo-500 text-white transition shadow-lg shadow-indigo-950/50">
+            Comenzar examen
+          </button>
+          <button onclick="resetToHome()" class="px-5 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-sm transition">
+            Cambiar módulo
           </button>
         </div>
       </div>
@@ -126,7 +167,11 @@
             <span id="quiz-unit-label" class="text-xs font-bold uppercase tracking-wider text-indigo-400">Unidad</span>
             <h2 id="quiz-counter" class="text-sm sm:text-base font-bold text-white">Pregunta 1 de 30</h2>
           </div>
-          <div class="flex items-center gap-3 text-xs font-semibold">
+          <div class="flex flex-wrap items-center gap-3 text-xs font-semibold">
+            <span id="timer-box" class="px-3 py-1 rounded-lg bg-amber-500/10 border border-amber-500/30 text-amber-300 text-sm font-extrabold tabular-nums flex items-center gap-1.5">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span id="timer-display">25:00</span>
+            </span>
             <span class="px-2.5 py-1 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-300">
               Correctas: <span id="score-correct">0</span>
             </span>
@@ -279,11 +324,70 @@
       }, 3200);
     }
 
-    function startQuiz(moduleKey) {
+    const EXAM_SIZE = 21;
+    const EXAM_SECONDS = 25 * 60;
+    let timerInterval = null;
+
+    function getModuleTitle(moduleKey) {
+      return moduleKey === 'integrador'
+        ? 'Examen Integrador Completo (Unidades 1, 2 y 3)'
+        : QUESTION_BANK[moduleKey].title;
+    }
+
+    function getPoolSize(moduleKey) {
+      return moduleKey === 'integrador'
+        ? Object.values(QUESTION_BANK).reduce((n, u) => n + u.questions.length, 0)
+        : QUESTION_BANK[moduleKey].questions.length;
+    }
+
+    function selectModule(moduleKey) {
       const nameInput = document.getElementById('student-name').value.trim();
       state.studentName = nameInput || 'Estudiante (Sin identificar)';
       state.moduleKey = moduleKey;
 
+      document.getElementById('start-title').textContent = getModuleTitle(moduleKey);
+      document.getElementById('start-student').textContent = state.studentName;
+      document.getElementById('start-pool').textContent = `de un banco de ${getPoolSize(moduleKey)}`;
+
+      document.getElementById('screen-home').classList.add('hidden');
+      document.getElementById('screen-results').classList.add('hidden');
+      document.getElementById('screen-start').classList.remove('hidden');
+      window.scrollTo(0, 0);
+    }
+
+    function formatTime(sec) {
+      const m = Math.floor(sec / 60);
+      const s = sec % 60;
+      return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+    }
+
+    function updateTimer() {
+      const remaining = Math.max(0, Math.round((state.endTime - Date.now()) / 1000));
+      state.remaining = remaining;
+      document.getElementById('timer-display').textContent = formatTime(remaining);
+
+      const box = document.getElementById('timer-box');
+      box.classList.remove('bg-amber-500/10', 'border-amber-500/30', 'text-amber-300', 'bg-rose-500/20', 'border-rose-500/60', 'text-rose-300', 'animate-pulse');
+      if (remaining <= 60) {
+        box.classList.add('bg-rose-500/20', 'border-rose-500/60', 'text-rose-300', 'animate-pulse');
+      } else if (remaining <= 5 * 60) {
+        box.classList.add('bg-rose-500/20', 'border-rose-500/60', 'text-rose-300');
+      } else {
+        box.classList.add('bg-amber-500/10', 'border-amber-500/30', 'text-amber-300');
+      }
+
+      if (remaining <= 0) {
+        finishQuiz(true);
+      }
+    }
+
+    function stopTimer() {
+      clearInterval(timerInterval);
+      timerInterval = null;
+    }
+
+    function startQuiz() {
+      const moduleKey = state.moduleKey;
       let pool = [];
       if (moduleKey === 'integrador') {
         state.moduleTitle = 'Examen Integrador Completo (Unidades 1, 2 y 3)';
@@ -300,6 +404,9 @@
           unit: moduleKey.toUpperCase().replace('UNIDAD', 'Unidad ')
         }));
       }
+
+      // Sorteo de 21 preguntas al azar del banco del módulo
+      pool = shuffleArray(pool).slice(0, EXAM_SIZE);
 
       state.questions = pool.map(item => ({
         question: item.q,
@@ -319,12 +426,22 @@
       history.pushState({ examLocked: true }, '', window.location.href);
 
       document.getElementById('screen-home').classList.add('hidden');
+      document.getElementById('screen-start').classList.add('hidden');
       document.getElementById('screen-results').classList.add('hidden');
       document.getElementById('screen-quiz').classList.remove('hidden');
       document.getElementById('header-badge').classList.remove('hidden');
       document.getElementById('header-badge').classList.add('flex');
 
       renderQuestion();
+
+      // Reloj de 25 minutos (basado en hora real: no se detiene si se minimiza la pestaña)
+      stopTimer();
+      state.startTime = Date.now();
+      state.endTime = state.startTime + EXAM_SECONDS * 1000;
+      state.timedOut = false;
+      updateTimer();
+      timerInterval = setInterval(updateTimer, 500);
+      window.scrollTo(0, 0);
     }
 
     function renderQuestion() {
@@ -374,7 +491,7 @@
 
     function selectAnswer(selectedText, selectedBtn) {
       // STRICT LOCK: once answered, cannot be changed or re-clicked
-      if (state.answeredCurrent) return;
+      if (!state.active || state.answeredCurrent) return;
       state.answeredCurrent = true;
 
       const current = state.questions[state.currentIndex];
@@ -450,7 +567,7 @@
     }
 
     function nextQuestion() {
-      if (!state.answeredCurrent) return;
+      if (!state.active || !state.answeredCurrent) return;
 
       if (state.currentIndex < state.questions.length - 1) {
         state.currentIndex++;
@@ -460,8 +577,30 @@
       }
     }
 
-    function finishQuiz() {
+    function finishQuiz(timedOut = false) {
+      if (!state.active) return;
       state.active = false;
+      stopTimer();
+      state.timedOut = timedOut;
+      state.elapsed = Math.min(EXAM_SECONDS, Math.round((Date.now() - state.startTime) / 1000));
+
+      // Preguntas sin contestar al agotarse el tiempo: cuentan como incorrectas
+      const answeredNumbers = new Set(state.history.map(h => h.number));
+      state.unanswered = 0;
+      state.questions.forEach((q, i) => {
+        if (!answeredNumbers.has(i + 1)) {
+          state.unanswered++;
+          state.wrongCount++;
+          state.history.push({
+            number: i + 1,
+            unit: q.unit,
+            question: q.question,
+            userAnswer: 'Sin responder (tiempo agotado)',
+            correctAnswer: q.correct,
+            isCorrect: false
+          });
+        }
+      });
       document.getElementById('progress-bar').style.width = '100%';
       document.getElementById('screen-quiz').classList.add('hidden');
       document.getElementById('header-badge').classList.add('hidden');
@@ -481,7 +620,8 @@
       badge.textContent = passed ? 'APROBADO (≥ 60%)' : 'NO APROBADO (< 60%)';
 
       document.getElementById('result-student-info').textContent =
-        `${state.studentName} · ${state.moduleTitle}`;
+        `${state.studentName} · ${state.moduleTitle} · Tiempo utilizado: ${formatTime(state.elapsed)}` +
+        (timedOut ? ` · ⏰ Tiempo agotado (${state.unanswered} sin responder)` : '');
       document.getElementById('final-score-pct').textContent = `${pct}%`;
       document.getElementById('final-correct').textContent = state.correctCount;
       document.getElementById('final-wrong').textContent = state.wrongCount;
@@ -517,6 +657,8 @@
 
     function resetToHome() {
       state.active = false;
+      stopTimer();
+      document.getElementById('screen-start').classList.add('hidden');
       document.getElementById('screen-results').classList.add('hidden');
       document.getElementById('screen-quiz').classList.add('hidden');
       document.getElementById('screen-home').classList.remove('hidden');
@@ -533,7 +675,8 @@
         `Evaluado: ${state.studentName}`,
         `Módulo: ${state.moduleTitle}`,
         `Resultado: ${state.correctCount}/${total} (${pct}%) - ${pct >= 60 ? 'APROBADO' : 'NO APROBADO'}`,
-        'Modalidad: Navegación estricta unidireccional (sin retroceso)',
+        `Tiempo utilizado: ${formatTime(state.elapsed)} de 25:00${state.timedOut ? ` (TIEMPO AGOTADO - ${state.unanswered} sin responder)` : ''}`,
+        'Modalidad: 21 preguntas al azar · 25 minutos · sin retroceso',
         '====================================================',
         ''
       ];
