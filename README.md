@@ -1,23 +1,27 @@
 # aplicaciones
 para iesp
 
-## Simulador de Evaluación – Análisis Delictual
+## Simulador – Primer Parcial de Análisis Delictual (UNT)
 
 Archivo: [`index.html`](index.html)
 
-Simulador de examen multiple choice para la Licenciatura en Seguridad Pública (UNT). Cada examen sortea **21 preguntas al azar** del banco del módulo elegido y tiene **25 minutos** de tiempo:
+Simulacro del Primer Examen Parcial de **Análisis Delictual** (Licenciatura en Seguridad Pública, UNT), armado con las mismas condiciones del [protocolo de la cátedra](material/Protocolo_de_examen.pdf):
 
-- **Unidad 1** – Fundamentos y Política Criminal (banco de 30 preguntas)
-- **Unidad 2** – Metodología y Objeto Criminológico (banco de 30 preguntas)
-- **Unidad 3** – Estadística Moral y Positivismo (banco de 30 preguntas)
-- **Simulacro General** – Examen integrador que sortea de las 90 preguntas
+- **Un único examen modelo** de las Unidades 1 a 7, con botón «Comenzar examen».
+- **21 preguntas al azar** de un banco de **199 preguntas** basado en la [guía de estudio U1–U7](material/guia_analisis_delictual_u1_u7.pdf). El sorteo toma 3 preguntas por unidad.
+- **25 minutos continuos**: el reloj arranca al comenzar y, si se agota, el examen se cierra solo (lo no respondido cuenta como incorrecto).
+- **Navegación secuencial estricta**: de a una pregunta, sin volver atrás ni cambiar respuestas.
+- **Nota sobre 10** (cada correcta vale 0,47619). Se aprueba con **6**, es decir **13 correctas de 21**.
+- Detalle de respuestas al final y descarga del acta en `.txt`.
 
-Características:
-
-- Pantalla previa con las reglas y botón «Comenzar examen»; el reloj de 25:00 arranca recién al presionarlo.
-- Si se agota el tiempo, el examen se cierra solo y las preguntas sin contestar cuentan como incorrectas.
-- Navegación estrictamente unidireccional: cada respuesta queda bloqueada y no se puede volver atrás (también se bloquea el botón «Atrás» del navegador).
-- Opciones mezcladas al azar en cada intento.
-- Resultado final con criterio de aprobación ≥ 60 % (13 de 21), tiempo utilizado, detalle de respuestas y descarga del acta en `.txt`.
+| Unidad | Tema | Preguntas en el banco |
+|---|---|---|
+| 1 | Análisis Criminal, Criminología y Política Criminal (Binder, Pezzuchi, Zaffaroni, Delmàs-Marty) | 39 |
+| 2 | Escuela Clásica, Elección Racional, Prevención Situacional y Metodología | 45 |
+| 3 | Estadística Moral, Positivismo y Control Social (Quetelet, Guerry, Lombroso, Ferri, Anitua) | 35 |
+| 4 | Escuela de Chicago y Delito de Cuello Blanco (Sutherland, Park y Burgess, Shaw y McKay) | 20 |
+| 5 | Etiquetamiento (Lemert, Becker, Kitsuse y Cicourel, Goffman, Sykes) | 20 |
+| 6 | Criminología Crítica y Nuevo Realismo de Izquierda (Lea y Young, Baratta) | 20 |
+| 7 | Ventanas Rotas, Tolerancia Cero y COMPSTAT | 20 |
 
 Para usarlo, abrí `index.html` en el navegador o publicalo con GitHub Pages (Settings → Pages → rama `main`, carpeta raíz).
